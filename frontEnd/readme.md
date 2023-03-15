@@ -4,7 +4,7 @@
 4) sudo apt-get install npm
 
 5) Install nextjs globally 
-6) - npm install -g next (Install locally in folder)
+6) npm install -g next (Install locally in folder)
 
 7) Create nextjs app - npx create-next-app four_square
 
