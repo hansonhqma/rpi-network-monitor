@@ -1,11 +1,11 @@
-1) Install nodejs and npm globally
-    sudo apt-get update
-    sudo apt-get install nodejs
-    sudo apt-get install npm
+1) Install nodejs and npm globally (Steps 1-4)
+2) sudo apt-get update
+3) sudo apt-get install nodejs
+4) sudo apt-get install npm
 
-2) Install nextjs globally - npm install -g next
-    - Install locally in folder
+5) Install nextjs globally 
+6) - npm install -g next (Install locally in folder)
 
-3) Create nextjs app - npx create-next-app four_square
+7) Create nextjs app - npx create-next-app four_square
 
-4) Run app - npm run dev
+8) Run app - npm run dev
