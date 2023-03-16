@@ -1,0 +1,543 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&family=Tilt+Warp&display=swap');
+
+:root {
+  --variable: 0;
+  --primary-bg: #161616;
+  --secondary-bg: #161616;
+
+
+  /*---------------------------------------------*/
+  /*          Text Emphasis Constants            */
+  /*---------------------------------------------*/
+    --high-emphasis-text: 0.87;
+    --medium-emphasis-text: 0.60;
+    --low-emphasis-text: 0.38;
+  /*---------------------------------------------*/
+  /*             Other Text Constants            */
+  /*---------------------------------------------*/
+  /* DEV-TASK(DONE) [Easy]: Change the Following to be em instead of pixels
+     once this is done we can change a single font variable and 
+     it will be able to adjust all text on the webpage at once! */
+    --base-font-size: 16px;
+
+    --massive-text: 8.875em;
+    --largest-text:  3.5em;
+    --larger-text: 2.25em;
+    --large-text: 1.5em;
+    --medium-text: 1.25em;
+    --small-text: 1.125em;
+    --smaller-text: 1em;
+    --smallest-text: .875em;
+    --line-height: 1.5em;
+    --primary-text-color: #fff;
+    --primary-text-highlight-color: rgb(217, 104, 255);
+  /*---------------------------------------------*/
+  /*          Webpage Header Constants           */
+  /*---------------------------------------------*/
+    --header-height: 70px;
+    --header-text-size: var(--small-text);
+    --scroll-progress: 0vw;
+  /*---------------------------------------------*/
+  /*         Webpage Toolbar Constants           */
+  /*---------------------------------------------*/
+    --toolbar-vertical-width: 50px;
+    --toolbar-vertical-height: 275px;
+/*---------------------------------------------*/
+/*           ^ End of CSS constants ^          */
+/*---------------------------------------------*/
+    font-family: 'Tilt Warp', cursive !important;
+    color: var(--primary-text-color);
+}
+
+/*---------------------------------------------*/
+/*           General CSS Classes Below         */
+/*---------------------------------------------*/
+.flex { display: flex !important; }
+.flow-row { display: flex; flex-flow: row; }
+.flow-col { display: flex; flex-flow: column; }
+.justify-center { display: flex; justify-content: center; }
+.align-center { display: flex; align-items: center; }
+.flex-center { display: flex; justify-content: center; align-items: center; }
+.justify-end { display: flex; justify-content: flex-end;}
+.justify-start { display: flex; justify-content: flex-start; }
+.justify-sb { display: flex; justify-content: space-between; }
+.justify-sa { display: flex; justify-content: space-around; }
+.fit-content { width: fit-content; }
+.fill-horizontal { flex: 1; display: flex;}
+.margin-0 { margin: 0 !important; }
+.padding-bottom-0 { padding-bottom: 0 !important; }
+.padding-bottom-5 { padding-bottom: 5px !important; }
+.margin-bottom-10 { margin-bottom: 10px !important; }
+/*---------------------------------------------*/
+/*         ^ End of CSS General Classes ^      */
+/*---------------------------------------------*/
+
+.icon-bg-blue {
+  background: linear-gradient(195deg, rgb(73, 163, 241), rgb(26, 115, 232)) !important;
+}
+
+.icon-bg-pink {
+  background: linear-gradient(195deg, rgb(236, 64, 122), rgb(216, 27, 96)) !important;
+}
+
+.icon-bg-green {
+  background: linear-gradient(195deg, rgb(102, 187, 106), rgb(67, 160, 71)) !important;
+}
+
+.icon-bg-orange {
+    background: linear-gradient(195deg, rgb(255, 148, 48) 11.2%, rgb(255, 124, 0) 100.2%) !important;
+}
+
+.icon-bg-black {
+  background: linear-gradient(195deg, rgb(66, 69, 74), rgb(27, 27, 27)) !important;
+}
+
+div, span, p {
+   box-sizing: border-box; 
+   font-family: 'Tilt Warp', cursive !important;
+
+}
+
+p {
+  font-size: var(--smaller-text);
+  opacity: var(--low-emphasis-text);
+}
+
+header {
+  position: fixed;
+  height:  var(--header-height);
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.035);
+  box-sizing: border-box;
+  z-index: 99999;
+
+  /* DEV-TASK (DONE) [Novice]: Make a better dropshadow below */
+  box-shadow: 
+  0 2.8px 2.2px black,
+  0 6.7px 5.3px black,
+  0 12.5px 10px black;
+
+
+}
+
+header::after {
+  position: absolute;
+  height: 2.5px;
+  background-color: rgba(255, 255, 255, 0.35);
+  width: 100%;
+  content: "";
+  top:  var(--header-height);
+}
+
+header::before {
+  position: absolute;
+  height: 2.5px;
+  background-color: rgba(255, 255, 255, 0.65);
+  width: 100%;
+  content: "";
+  top:  var(--header-height);
+  left: calc(-1 * var(--scroll-progress));
+}
+/* Add an smooth animation on any link hover */
+a:hover {
+  transform: scale(1.3);
+  transition: transform 0.3s ease-in-out; 
+  animation-name: fade;
+  animation-duration: 0.7s; 
+  animation-fill-mode: forwards;
+}
+
+@keyframes fade {
+  from {color: var(--primary-text-color); }
+  to {color: var(--primary-text-highlight-color);}
+}
+
+header > div:first-of-type { padding-left: 7.5px; }  /* Value is 1 times 7.5  -> 7.5 x 3 = 7.5  */
+header > div:last-of-type { padding-right: 22.5px; } /* Value is 3 times 7.5  -> 7.5 x 3 = 22.5 */
+
+
+
+.header-logo-container img { width: 55px; height: 55px; } 
+
+
+body {
+
+  font-size: var(--base-font-size);
+
+  height: 100vh;
+  width: 100%;
+  margin: 0 !important;
+  padding: 0 !important;
+
+  position: relative;
+
+/* Hide scrollbar for IE, Edge and Firefox */
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+
+/* Hide scrollbar for other browsers  */
+body::-webkit-scrollbar { display: none; }
+
+
+.primary-bg {
+  background: var(--primary-bg) !important;
+}
+
+
+/*
+
+*/
+
+
+
+
+.webpage-section-container {
+  width: -moz-available;          /* WebKit-based browsers will ignore this. */
+  width: -webkit-fill-available;  /* Mozilla-based browsers will ignore this. */
+  /*width: initial;*/
+  height: auto;
+
+  display: flex;
+  flex-flow: column;
+
+  margin: 15px 40px;
+  padding: 10px 0px;
+}
+
+.webpage-section-container h3 {
+  font-size: var(--larger-text);
+
+  max-width: 450px;
+  text-align: center;
+
+  margin: 0 auto;
+
+  padding: 10px 0px;
+
+}
+
+
+
+.webpage-content-section-container {
+  width: -moz-available;          /* WebKit-based browsers will ignore this. */
+  width: -webkit-fill-available;  /* Mozilla-based browsers will ignore this. */
+  /*width: initial;*/
+  height: auto;
+
+  display: flex;
+  flex-flow: row;
+
+  margin: 15px 50px;
+  padding: 10px 0px;
+}
+
+.webpage-content-section-container h3 {
+  font-size: var(--larger-text);
+  padding: 0px 0px 0px 0px;
+  margin: 15px 0px 5px 0px ;
+
+}
+
+.webpage-content-section-container h5 {
+  font-size: var(--medium-text);
+  padding: 0px 0px 0px 0px;
+  margin: 0px 0px 15px 0px ;
+}
+
+.webpage-content-section-graphic-box {
+  width: auto;
+  height: auto;
+  margin-left: 10px;
+}
+
+.webpage-content-section-main-box {
+  flex: 1;
+  height: auto;
+  margin-right: 10px;
+  padding: 0px 25px;
+}
+
+
+/* DEV-TASK (DONE) [Novice]: Delete this entire file completely from the 
+application and make sure the application still runs properly */
+
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6rem;
+  min-height: 100vh;
+}
+
+.description {
+  display: inherit;
+  justify-content: inherit;
+  align-items: inherit;
+  font-size: 0.85rem;
+  max-width: var(--max-width);
+  width: 100%;
+  z-index: 2;
+  font-family: var(--font-mono);
+}
+
+.description a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.description p {
+  position: relative;
+  margin: 0;
+  padding: 1rem;
+  background-color: rgba(var(--callout-rgb), 0.5);
+  border: 1px solid rgba(var(--callout-border-rgb), 0.3);
+  border-radius: var(--border-radius);
+}
+
+.code {
+  font-weight: 700;
+  font-family: var(--font-mono);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(25%, auto));
+  width: var(--max-width);
+  max-width: 100%;
+}
+
+.card {
+  padding: 1rem 1.2rem;
+  border-radius: var(--border-radius);
+  background: rgba(var(--card-rgb), 0);
+  border: 1px solid rgba(var(--card-border-rgb), 0);
+  transition: background 200ms, border 200ms;
+}
+
+.card span {
+  display: inline-block;
+  transition: transform 200ms;
+}
+
+.card h2 {
+  font-weight: 600;
+  margin-bottom: 0.7rem;
+}
+
+.card p {
+  margin: 0;
+  opacity: 0.6;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  max-width: 30ch;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 4rem 0;
+}
+
+.center::before {
+  background: var(--secondary-glow);
+  border-radius: 50%;
+  width: 480px;
+  height: 360px;
+  margin-left: -400px;
+}
+
+.center::after {
+  background: var(--primary-glow);
+  width: 240px;
+  height: 180px;
+  z-index: -1;
+}
+
+.center::before,
+.center::after {
+  content: '';
+  left: 50%;
+  position: absolute;
+  filter: blur(45px);
+  transform: translateZ(0);
+}
+
+.logo,
+.thirteen {
+  position: relative;
+}
+
+.thirteen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 75px;
+  height: 75px;
+  padding: 25px 10px;
+  margin-left: 16px;
+  transform: translateZ(0);
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  box-shadow: 0px 2px 8px -1px #0000001a;
+}
+
+.thirteen::before,
+.thirteen::after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+}
+
+/* Conic Gradient Animation */
+.thirteen::before {
+  animation: 6s rotate linear infinite;
+  width: 200%;
+  height: 200%;
+  background: var(--tile-border);
+}
+
+/* Inner Square */
+.thirteen::after {
+  inset: 0;
+  padding: 1px;
+  border-radius: var(--border-radius);
+  background: linear-gradient(
+    to bottom right,
+    rgba(var(--tile-start-rgb), 1),
+    rgba(var(--tile-end-rgb), 1)
+  );
+  background-clip: content-box;
+}
+
+/* Enable hover only on non-touch devices */
+@media (hover: hover) and (pointer: fine) {
+  .card:hover {
+    background: rgba(var(--card-rgb), 0.1);
+    border: 1px solid rgba(var(--card-border-rgb), 0.15);
+  }
+
+  .card:hover span {
+    transform: translateX(4px);
+  }
+}
+
+@media (prefers-reduced-motion) {
+  .thirteen::before {
+    animation: none;
+  }
+
+  .card:hover span {
+    transform: none;
+  }
+}
+
+/* Mobile */
+@media (max-width: 700px) {
+  .content {
+    padding: 4rem;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+    margin-bottom: 120px;
+    max-width: 320px;
+    text-align: center;
+  }
+
+  .card {
+    padding: 1rem 2.5rem;
+  }
+
+  .card h2 {
+    margin-bottom: 0.5rem;
+  }
+
+  .center {
+    padding: 8rem 0 6rem;
+  }
+
+  .center::before {
+    transform: none;
+    height: 300px;
+  }
+
+  .description {
+    font-size: 0.8rem;
+  }
+
+  .description a {
+    padding: 1rem;
+  }
+
+  .description p,
+  .description div {
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    width: 100%;
+  }
+
+  .description p {
+    align-items: center;
+    inset: 0 0 auto;
+    padding: 2rem 1rem 1.4rem;
+    border-radius: 0;
+    border: none;
+    border-bottom: 1px solid rgba(var(--callout-border-rgb), 0.25);
+    background: linear-gradient(
+      to bottom,
+      rgba(var(--background-start-rgb), 1),
+      rgba(var(--callout-rgb), 0.5)
+    );
+    background-clip: padding-box;
+    backdrop-filter: blur(24px);
+  }
+
+  .description div {
+    align-items: flex-end;
+    pointer-events: none;
+    inset: auto 0 0;
+    padding: 2rem;
+    height: 200px;
+    background: linear-gradient(
+      to bottom,
+      transparent 0%,
+      rgb(var(--background-end-rgb)) 40%
+    );
+    z-index: 1;
+  }
+}
+
+/* Tablet and Smaller Desktop */
+@media (min-width: 701px) and (max-width: 1120px) {
+  .grid {
+    grid-template-columns: repeat(2, 50%);
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .vercelLogo {
+    filter: invert(1);
+  }
+
+  .logo,
+  .thirteen img {
+    filter: invert(1) drop-shadow(0 0 0.3rem #ffffff70);
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}

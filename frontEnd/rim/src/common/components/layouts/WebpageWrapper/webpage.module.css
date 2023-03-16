@@ -1,0 +1,60 @@
+.webpage-container {
+    padding-top: var(--header-height);
+    height: auto;
+    overflow-x: hidden;
+  
+}
+
+/* Header CSS below */
+
+.header-link-container {
+    gap: 30px;
+    background-color: #1e1e1e; 
+
+}
+
+.header-link-container a {
+    height: 100%;
+    width: fit-content;
+    padding-inline: 10px;
+    text-decoration: none !important;
+}
+
+.header-link-container a {
+    font-size: var(--header-text-size);
+    color: var(--primary-text-color);
+    text-decoration: none !important;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 1);
+}
+
+
+/* Toolbar CSS Below */
+
+.toolbar-vertical-container {
+    position: fixed;
+    left: 12.5px;
+    top: calc(50% - (2*var(--toolbar-vertical-width) + 25px));
+
+    height: var(--toolbar-vertical-height);
+    width: var(--toolbar-vertical-width);
+
+    background: rgba(255, 255, 255, 0.035);
+
+    border-radius: calc(var(--toolbar-vertical-width)/2);
+    border: 2.5px solid rgba(255, 255, 255, 0.65);
+}
+
+
+.toolbar-icon-container {
+    margin-top: 10px;
+    height: 50px;
+    width: calc(var(--toolbar-vertical-width) - 5px);
+}
+
+.toolbar-last-container {
+    flex: 1;
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+}
+
+

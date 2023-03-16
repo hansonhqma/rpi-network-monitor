@@ -1,0 +1,3 @@
+
+DEV-TASK [Easy]: Create multiple javascript files and folders in this directory and make constants for all of the text on the website.
+This way if we want to update any text on the website we will come along to this folder!

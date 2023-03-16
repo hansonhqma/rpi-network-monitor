@@ -1,0 +1,22 @@
+.support-p-line-clamp p {
+    overflow: hidden;
+
+}
+
+.support-p-line-clamp {
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;  
+    overflow: hidden;
+  }
+
+  
+.cr {
+    margin: 0 auto;
+    text-decoration: underline;  
+    cursor: pointer;
+  }
+
+.support-padding-top {
+    padding-top: 50px;
+}

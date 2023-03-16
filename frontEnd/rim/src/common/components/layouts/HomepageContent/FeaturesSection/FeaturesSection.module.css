@@ -1,0 +1,32 @@
+.features-second-margin {
+    padding-top: 50px;
+}
+
+.features-p-line-clamp p {
+    overflow: hidden;
+
+}
+
+.features-p-line-clamp {
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;  
+    overflow: hidden;
+  }
+
+.cr {
+  margin: 0 auto;
+  text-decoration: underline;  
+  cursor: pointer;
+}
+
+.features-slider-container {
+    width: -webkit-fill-available;
+    flex: 1;
+    min-height: 250px;
+    background-color: transparent;
+    margin-top: 10px;
+    margin-bottom: 55px;
+}
+
+

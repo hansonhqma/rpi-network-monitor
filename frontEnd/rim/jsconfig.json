@@ -2,7 +2,17 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@/*": ["./*"]
+      "@/*": ["./src/*"],
+      "@/images/*": ["./src/assets/images/*"],
+      "@/layouts": ["./src/common/components/layouts*"],
+      "@/components*": ["./src/common/components*"],
+      "@/WebpageWrapper": ["./src/common/components/layouts/WebpageWrapper/index.jsx"],
+      "@/AR-Logo": ["./src/assets/images/AR-Logo.svg"],
+      "@/HeroSection": ["./src/common/components/layouts/HomepageContent/HeroSection/__index.js"],
+      "@/GridSection": ["./src/common/components/layouts/HomepageContent/GridSection/__index.js"],
+      "@/FeaturesSection": ["./src/common/components/layouts/HomepageContent/FeaturesSection/__index.js"],
+      "@/SponsorSection": ["./src/common/components/layouts/HomepageContent/SponsorSection/__index.js"],
+      "@/SupportSection": ["./src/common/components/layouts/HomepageContent/SupportSection/__index.js"],
     }
   }
 }
