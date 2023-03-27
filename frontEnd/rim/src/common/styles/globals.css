@@ -138,14 +138,6 @@ header::before {
   top:  var(--header-height);
   left: calc(-1 * var(--scroll-progress));
 }
-/* Add an smooth animation on any link hover */
-a:hover {
-  transform: scale(1.3);
-  transition: transform 0.3s ease-in-out; 
-  animation-name: fade;
-  animation-duration: 0.7s; 
-  animation-fill-mode: forwards;
-}
 
 @keyframes fade {
   from {color: var(--primary-text-color); }

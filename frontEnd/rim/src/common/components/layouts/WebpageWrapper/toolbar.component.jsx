@@ -1,3 +1,5 @@
+//DELETE
+
 import React, { useState, useLayoutEffect, useEffect, useRef } from "react";
 import styles from './webpage.module.css'
 import { FaApple, FaGooglePlay } from 'react-icons/fa'

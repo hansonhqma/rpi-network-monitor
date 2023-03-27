@@ -1,5 +1,6 @@
+//THIS IS HEADER/NAVBAR
+
 import React, { useState, useLayoutEffect, useEffect, useRef } from "react";
-//import styles from './webpage.module.css'
 import styles from './webpage.module.css'
 import Logo from "@/AR-Logo"
 
@@ -8,7 +9,7 @@ import Link from 'next/link';
 
 
 
-
+//REPLACE WITH LINKS TO OTHER PAGES
 const HeaderComponent = (props) => {
     let temp_array = [{
         title: 'Lorem',
@@ -31,18 +32,15 @@ const HeaderComponent = (props) => {
     }
     ]
 
+    //REPLACE LOGO
     return (
         <header className="flex flex-row">
             <div className="flex flex-center fit-content header-logo-container"> 
-                <Image src={Logo} alt="Audio Reality Logo" /> 
+                <Image src={Logo} alt="RPI Internet Monitor Logo" /> 
             </div>
             <div className={`flex fill-horizontal flow-row justify-end ${styles['header-link-container']}`}>
                {temp_array.map(( element, index ) => {
                     return (
-                        /* DEV-TASK [Easy-Medium] (DONE): Make a clean animation for when any link is hovered on */
-                        /* DEV-TASK [Easy-Medium]: Make the Sign In | Sign Up Its own button with a clean minimalistic animation */
-                        /* DEV-TASK [Hard-Diffiucult]: Make drop down menus compatible with the following code. 
-                            Another loop and sub arrays will be needed for this to be acheived */
                         <Link className="flex flex-center" href={element.link}>
                             {element.title}
                         </Link>

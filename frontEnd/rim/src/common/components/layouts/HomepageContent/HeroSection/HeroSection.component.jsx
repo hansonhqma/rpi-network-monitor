@@ -1,3 +1,5 @@
+//THIS IS RIM HERO SECTION (RENAME)
+
 import styles from './HeroSection.module.css'
 import Image from 'next/image';
 import Link from 'next/link';
@@ -46,21 +48,14 @@ function ProgressPath(props){
 
 export default function Hero( props ){
 
-    /* DEV-TASK [Developer] (Ask Project Lead befor attempting): Make the Hero Section have 4 unique sliders 
-        to show content. This will be done with the use of components stored in an array of 4 long. Make the 
-        path a progress bar that shows how far a user is amongst the slides, Make the animation for switching 
-        slides similar to the folowing: https://mst.agency/. While also making the path dots fill in for what 
-        part of the slides we are in. 
-         
-                 (Think about using gradients in between each dots to make the color change seemless)
-    */
+    //Replace Image with RIM Logo
      return ( 
         <div className={`flex flow-col ${styles['hero-wrapper']}`}>
-             <span className={`${styles['hero-background-text']}`}> Auditory Enhancements </span>
-             <h2>Lorem Ipsum Dalor</h2>
-             <h1>Big Super Fancy Title</h1>
-             <Image src={Image1}></Image>
-             <h5>incididunt ut labore et dolore magna</h5>
+             <span className={`${styles['hero-background-text']}`}> RPI Internet Monitor </span>
+             <h2></h2>
+             <h1>RPI Internet Monitor</h1>
+             <Image src={Image1}></Image> 
+             <h5>"RIM Motto"</h5>
             <ProgressPath />
             <div className={`flex flow-row justify-sb ${styles['continue-scrolling-section']}`}>
                 <BsChevronDoubleDown size={'2.25em'} color={'rgba(255, 255, 255, var(--high-emphasis-text))'}/>
