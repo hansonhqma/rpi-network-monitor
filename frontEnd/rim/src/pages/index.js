@@ -6,9 +6,7 @@ import { Inter } from '@next/font/google'
 import WebpageWrapper from '@/WebpageWrapper'
 
 import { HeroSection } from '@/HeroSection'
-import { GridSection } from '@/GridSection'
 import { FeaturesSection } from "@/FeaturesSection"
-import { SponsorSection } from "@/SponsorSection"
 import { SupportSection } from "@/SupportSection"
 
 
@@ -20,7 +18,6 @@ export default function Home() {
       <WebpageWrapper>
         <HeroSection />
         <FeaturesSection />
-        <SponsorSection />
         <SupportSection />
       </WebpageWrapper>
   )

@@ -1,11 +1,7 @@
 //THIS IS RIM DESCRIPTION SECTION (RENAME)
 
 import styles from './FeaturesSection.module.css'
-import Image from 'next/image';
-import Link from 'next/link';
 
-import { FaQuestion } from "react-icons/fa";
-import { PhoneGraphic } from '@/components/PhoneGraphic/__index.js'
 
 export default function FeaturesSection( props ){
 
