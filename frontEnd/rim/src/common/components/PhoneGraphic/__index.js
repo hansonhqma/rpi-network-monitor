@@ -1,0 +1,1 @@
+export { default as PhoneGraphic } from "./Phone.component.jsx"; 
