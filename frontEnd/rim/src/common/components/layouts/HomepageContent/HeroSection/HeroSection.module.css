@@ -1,4 +1,3 @@
-
 .hero-wrapper {
     width: 100%;
     height: calc(100vh - var(--header-height));
@@ -20,6 +19,7 @@
 .hero-wrapper h1 {
     margin: 2.5px 0px 0px 0px;
     padding: 0px;
+    padding-bottom: 20px;
 
     font-size: var(--largest-text);
     opacity: var(--high-emphasis-text);
@@ -29,6 +29,7 @@
 .hero-wrapper h5 {
     margin: 5px 0px 0px 0px;
     padding: 0px;
+    padding-top: 20px;
 
     font-size: var(--medium-text);
     opacity: var(--high-emphasis-text);
@@ -37,6 +38,7 @@
 .hero-wrapper img {
     height: 40vh;
     width: auto;
+    border-radius: 30px;
 }
 
 .hero-wrapper span:first-of-type {

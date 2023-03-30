@@ -37,11 +37,7 @@
     --header-height: 70px;
     --header-text-size: var(--small-text);
     --scroll-progress: 0vw;
-  /*---------------------------------------------*/
-  /*         Webpage Toolbar Constants           */
-  /*---------------------------------------------*/
-    --toolbar-vertical-width: 50px;
-    --toolbar-vertical-height: 275px;
+
 /*---------------------------------------------*/
 /*           ^ End of CSS constants ^          */
 /*---------------------------------------------*/
@@ -149,7 +145,7 @@ header > div:last-of-type { padding-right: 22.5px; } /* Value is 3 times 7.5  ->
 
 
 
-.header-logo-container img { width: 55px; height: 55px; } 
+.header-logo-container img { width: 85px; height: 85px; padding-left: 5px;} 
 
 
 body {

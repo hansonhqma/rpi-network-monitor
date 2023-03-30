@@ -7,7 +7,7 @@ import WebpageWrapper from '@/WebpageWrapper'
 
 import { HeroSection } from '@/HeroSection'
 import { FeaturesSection } from "@/FeaturesSection"
-import { SupportSection } from "@/SupportSection"
+import { ConnectionResults } from "@/common/components/layouts/HomepageContent/ConnectionResults/__index"
 
 
 

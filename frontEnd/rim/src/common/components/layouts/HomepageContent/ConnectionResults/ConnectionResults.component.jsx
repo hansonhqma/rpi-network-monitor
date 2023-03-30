@@ -1,8 +1,13 @@
 //THIS IS CONNECTION RESULTS (RENAME)
 
-import styles from './SupportSection.module.css'
+import styles from './ConnectionResults.module.css'
 
-export default function SupportSection( props ){
+
+//This is where we get the users current results
+//fetch("localhost:3000/get_building_last?ip=129.139.34.29")
+//.then((response) => response.json)
+
+export default function ConnectionResults( props ){
      return ( 
         <div className={`webpage-content-section-container ${styles['support-padding-top']}`}> 
             <div className={`flex flow-col webpage-content-section-main-box ${styles['support-second-margin']}`}>

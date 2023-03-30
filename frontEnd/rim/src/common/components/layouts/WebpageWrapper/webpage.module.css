@@ -44,45 +44,7 @@
     text-shadow: 2px 2px 2px rgba(44, 44, 44, 0.25);
 }
 
-
-/* Toolbar CSS Below */
-
-.toolbar-vertical-container {
-    position: fixed;
-    left: 12.5px;
-    top: calc(50% - (2*var(--toolbar-vertical-width) + 25px));
-
-    height: var(--toolbar-vertical-height);
-    width: var(--toolbar-vertical-width);
-
-    background: rgba(255, 255, 255, 0.035);
-
-    border-radius: calc(var(--toolbar-vertical-width)/2);
-    border: 2.5px solid rgba(255, 255, 255, 0.65);
-
-    z-index: 999999;
-}
-
-
-.toolbar-icon-container {
-    margin-top: 10px;
-    height: 50px;
-    width: calc(var(--toolbar-vertical-width) - 5px);
-}
-
-.toolbar-last-container {
-    flex: 1;
-    writing-mode: vertical-lr;
-    transform: rotate(180deg);
-}
-
-
-
-
-
 /* Footer CSS BELOW */
-
-
 
 .footer-top-wrapper {
     display: flex;

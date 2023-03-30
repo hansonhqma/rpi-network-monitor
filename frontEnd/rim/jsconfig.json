@@ -12,8 +12,7 @@
       "@/HeroSection": ["./src/common/components/layouts/HomepageContent/HeroSection/__index.js"],
       "@/GridSection": ["./src/common/components/layouts/HomepageContent/GridSection/__index.js"],
       "@/FeaturesSection": ["./src/common/components/layouts/HomepageContent/FeaturesSection/__index.js"],
-      "@/SponsorSection": ["./src/common/components/layouts/HomepageContent/SponsorSection/__index.js"],
-      "@/SupportSection": ["./src/common/components/layouts/HomepageContent/SupportSection/__index.js"],
+      "@/ConnectionResults": ["./src/common/components/layouts/HomepageContent/ConnectionResults/__index.js"],
     }
   }
 }
