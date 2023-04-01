@@ -57,7 +57,7 @@ export default function Hero( props ){
              <div>
                 <Image src={Logo} alt="RPI Internet Monitor Logo"></Image> 
              </div>
-             <h5>"RIM Motto"</h5>
+             <h5>"For Internet Speed, RIM Will Find Your Needs"</h5>
 
             <ProgressPath />
 

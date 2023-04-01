@@ -9,11 +9,11 @@ export default function FeaturesSection( props ){
         <div className="webpage-content-section-container">
             <div className={`flex flow-col webpage-content-section-main-box ${styles['features-second-margin']}`}>
 
-                <h3>What is RPI Internet Monitor?</h3>
-                <h5>"Description of RIM"</h5>
+                <h3 className={'justify-center'} >What is RPI Internet Monitor?</h3>
+                <h5 className={'justify-center'} >"Description of RIM"</h5>
 
-                <p className={`margin-0  margin-bottom-10 ${styles['features-p-line-clamp']}`}>
-                Facilisis mauris sit amet massa. Vitae semper quis lectus nulla at volutpat. Nibh venenatis cras sed felis eget velit. Sapien et ligula ullamcorper malesuada proin libero nunc consequat interdum. Vitae nunc sed velit dignissim sodales ut eu sem integer. Amet risus nullam eget felis eget nunc lobortis mattis. Ullamcorper velit sed ullamcorper morbi tincidunt ornare massa. Dictumst vestibulum rhoncus est pellentesque elit ullamcorper dignissim. Sit amet consectetur adipiscing elit pellentesque habitant morbi. Sed egestas egestas fringilla phasellus faucibus scelerisque eleifend donec. Odio ut sem nulla pharetra. Non quam lacus suspendisse faucibus interdum posuere lorem ipsum. Duis ultricies lacus sed turpis tincidunt id.
+                <p className={`margin-0   margin-bottom-10 ${styles['features-p-line-clamp']}`}>
+                The RPI Internet Monitor app (RIM) is a useful and comprehensive solution for monitoring RPI Internet speed. The RIM enables users to quickly discover internet speed within defined coverage areas. Users are able to search for locations on campus based on internet speed, building name, and when the last internet test was. RIM informs users of optimal locations based on their specific criteria and needs. The app, with its simple and informative use, will be accessible to most on the RPI campus and has the potential to be useful in many aspects of campus life.
                 </p>
             </div>
         </div>
