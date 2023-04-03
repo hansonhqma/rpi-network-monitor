@@ -15,6 +15,7 @@
       "@/ConnectionResults": ["./src/common/components/layouts/HomepageContent/ConnectionResults/__index.js"],
       "@/TableSection": ["./src/common/components/layouts/DirectorypageContent/TableSection/__index.js"],
       "@/backEnd/*": ["../../backEnd/*"],
+      "@/MapSection": ["./src/common/components/layouts/MappageContent/MapSection/__index.js"],
     }
   }
 }

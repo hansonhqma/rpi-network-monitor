@@ -5,7 +5,7 @@ import { Inter } from '@next/font/google'
 
 import WebpageWrapper from '@/WebpageWrapper'
 
-import { HeroSection } from '@/HeroSection'
+import { MapSection } from '@/MapSection'
 import { FeaturesSection } from "@/FeaturesSection"
 import { ConnectionResults } from "@/common/components/layouts/HomepageContent/ConnectionResults/__index"
 

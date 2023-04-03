@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useTable } from 'react-table';
 import request from 'graphql-request';
 import axios from 'axios';
@@ -8,7 +8,34 @@ import './TableSection.module.css';
 
 const App = () => {
     const [infos, setInfo] = useState(data);
-    /*
+    const [sortedData, setSortedData] = useState([...data]);
+    const sortData = (sortBy) => {
+        const sorted = [...sortedData].sort((a, b) => {
+          if (a[sortBy] < b[sortBy]) {
+            return -1;
+          }
+          if (a[sortBy] > b[sortBy]) {
+            return 1;
+          }
+          return 0;
+        });
+        setSortedData(sorted);
+    };
+
+    /*    
+    const [sortedFeild, setSortedField] = React.useState(null);
+    if(sortedFeild != null){
+        sortedLocations.sort((a, b) => {
+            if(a[sortedFeild] < b[sortedFeild]){
+                return -1;
+            }
+            if(a[sortedFeild] > b[sortedFeild]){
+                return -1;
+            }
+            return 0;
+        })
+    }
+
     const columns = [
         {
             Header: 'Building',
@@ -39,15 +66,25 @@ const App = () => {
             <table>
                 <thead>
                     <tr>
-                        <th><h5>Building</h5></th>
-                        <th><h5>Download Speed (Mbps)</h5></th>
-                        <th><h5>Updoad Speed (Mbps)</h5></th>
-                        <th><h5>RTT (ms)</h5></th>
-                        <th><h5>Last Updated Time</h5></th>
+                        <th><h5>Building
+                            <button onClick={() => sortData("building_name")}>sort</button>
+                            </h5></th>
+                        <th><h5>Download Speed (Mbps)
+                            <button onClick={() => sortData("download_speed")}>sort</button>
+                            </h5></th>
+                        <th><h5>Updoad Speed (Mbps)
+                            <button onClick={() => sortData("upload_speed")}>sort</button>
+                            </h5></th>
+                        <th><h5>RTT (ms)
+                            <button onClick={() => sortData("rtt")}>sort</button>
+                            </h5></th>
+                        <th><h5>Last Updated Time
+                            <button onClick={() => sortData("update_time")}>sort</button>
+                            </h5></th>
                     </tr>
                 </thead>
                 <tbody>
-                    {infos.map((info) => (
+                    {sortedData.map((info, index) => (
                         <tr>
                             <td>{info.building_name}</td>
                             <td>{info.download_speed}</td>
