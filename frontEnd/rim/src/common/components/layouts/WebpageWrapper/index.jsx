@@ -24,7 +24,6 @@ const WebpageWrapper = (props) => {
     }, []);
    
     useEffect(() => {
-        console.log("Percent Scrolled Is: ", scrollPercentage, "%" );
         if( !(scrollPercentage < 5) ){
             document.querySelector(':root').style.setProperty('--scroll-progress', `${100 - scrollPercentage}vw`);
         } else { document.querySelector(':root').style.setProperty('--scroll-progress', `${100}vw`); }
