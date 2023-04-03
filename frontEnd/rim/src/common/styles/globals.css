@@ -515,3 +515,27 @@ body::-webkit-scrollbar { display: none; }
     transform: rotate(0deg);
   }
 }
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+table thead td {
+  font-weight: bold;
+  padding: 8px;
+  width: calc(100% / 5);
+  /* Hardcode number of columns in the table */
+}
+
+table tbody td {
+  border: 1px solid #837d7d;
+  padding: 8px;
+  text-align: center;
+  width: calc(100% / 5);
+  /* Hardcode number of columns in the table */
+}
+tr:nth-child(even) {
+  background-color: #4b4b4b;
+}

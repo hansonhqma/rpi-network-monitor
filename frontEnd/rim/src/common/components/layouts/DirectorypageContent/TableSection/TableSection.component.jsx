@@ -3,7 +3,7 @@ import { useTable } from 'react-table';
 import request from 'graphql-request';
 import axios from 'axios';
 import data from '@/assets/jsonFile/mock-data.json';
-//import styles from './TableSection.module.css';
+import './TableSection.module.css';
 //import * as dataFunctions from '@/backEnd/index.js';
 
 const App = () => {
@@ -39,11 +39,11 @@ const App = () => {
             <table>
                 <thead>
                     <tr>
-                        <th>Building</th>
-                        <th>Download Speed (Mbps)</th>
-                        <th>Updoad Speed (Mbps)</th>
-                        <th>RTT (ms)</th>
-                        <th>Last Updated Time</th>
+                        <th><h5>Building</h5></th>
+                        <th><h5>Download Speed (Mbps)</h5></th>
+                        <th><h5>Updoad Speed (Mbps)</h5></th>
+                        <th><h5>RTT (ms)</h5></th>
+                        <th><h5>Last Updated Time</h5></th>
                     </tr>
                 </thead>
                 <tbody>
