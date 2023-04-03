@@ -23,6 +23,7 @@ if (typeof window !== 'undefined') {
       var speedKbps = (speedBps / 1024).toFixed(2);
       var speedMbps = (speedKbps / 1024).toFixed(2);
       console.log("speed Mbps: " + speedMbps)
+      document.getElementById('output').innerHTML = speedMbps;
     }
   
     download.onerror = function (err, msg) {
@@ -80,10 +81,10 @@ export default function ConnectionResults( props ){
 
                 <div class = "container">
                     <h3 className={` justify-center ${styles['results']}`}>
-                        Building Name: &nbsp; Darrin Communications Center
+                        Building Name: &nbsp; Walker Laboratories
                     </h3>
                     <h3 className={` justify-center ${styles['results']}`}>
-                        Download Speed: &nbsp; 190mbs
+                        Download Speed: &nbsp; <p id="output"></p> mbps
                     </h3>
                 </div>
             </div>
