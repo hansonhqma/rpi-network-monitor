@@ -66,19 +66,19 @@ const App = () => {
             <table>
                 <thead>
                     <tr>
-                        <th><h5>Building
+                        <th><h5>Building &nbsp;
                             <button onClick={() => sortData("building_name")}>sort</button>
                             </h5></th>
-                        <th><h5>Download Speed (Mbps)
+                        <th><h5>Download Speed (Mbps) &nbsp;
                             <button onClick={() => sortData("download_speed")}>sort</button>
                             </h5></th>
-                        <th><h5>Updoad Speed (Mbps)
+                        <th><h5>Upload Speed (Mbps) &nbsp;
                             <button onClick={() => sortData("upload_speed")}>sort</button>
                             </h5></th>
-                        <th><h5>RTT (ms)
+                        <th><h5>RTT (ms) &nbsp;
                             <button onClick={() => sortData("rtt")}>sort</button>
                             </h5></th>
-                        <th><h5>Last Updated Time
+                        <th><h5>Last Updated &nbsp;
                             <button onClick={() => sortData("update_time")}>sort</button>
                             </h5></th>
                     </tr>
