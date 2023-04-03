@@ -1,3 +1,21 @@
+.results{
+  padding-top: 50px;
+  opacity: var(--high-emphasis-text);
+}
+.container {
+  display: flex;
+}
+.container > div {
+  flex: 1; /*grow*/
+}
+
+div.hr{
+  color: #f00;
+  background-color: #f00;
+  height: 5px;
+
+}
+
 .support-p-line-clamp p {
     overflow: hidden;
 
