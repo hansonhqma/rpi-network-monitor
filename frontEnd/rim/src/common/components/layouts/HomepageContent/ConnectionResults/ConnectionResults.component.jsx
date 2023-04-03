@@ -12,12 +12,24 @@ export default function ConnectionResults( props ){
         <div className={`webpage-content-section-container ${styles['support-padding-top']}`}> 
             <div className={`flex flow-col webpage-content-section-main-box ${styles['support-second-margin']}`}>
                 
-                <h3>Current Connection Results</h3>
-                <h5>"Put connection results below"</h5>
+                <h3 className={'justify-center'} >Current Connection Results</h3>
+                <h5 className={'justify-center '}>"Your connection results below"</h5>
+                
+                <h3></h3>
+                <div className={`${styles['hr']}`}><hr /></div>
+                <h3></h3>
 
-                <p className={`margin-0  margin-bottom-10 ${styles['support-p-line-clamp']}`}>
-                    Facilisis mauris sit amet massa. Vitae semper quis lectus nulla at volutpat. Nibh venenatis cras sed felis eget velit. Sapien et ligula ullamcorper malesuada proin libero nunc consequat interdum. Vitae nunc sed velit dignissim sodales ut eu sem integer. Amet risus nullam eget felis eget nunc lobortis mattis. Ullamcorper velit sed ullamcorper morbi tincidunt ornare massa. Dictumst vestibulum rhoncus est pellentesque elit ullamcorper dignissim. Sit amet consectetur adipiscing elit pellentesque habitant morbi. Sed egestas egestas fringilla phasellus faucibus scelerisque eleifend donec. Odio ut sem nulla pharetra. Non quam lacus suspendisse faucibus interdum posuere lorem ipsum. Duis ultricies lacus sed turpis tincidunt id.
-                </p>
+                <div class = "container">
+                    <h3 className={` justify-center ${styles['results']}`}>
+                        Building Name: &nbsp; Darrin Communications Center
+                    </h3>
+                    <h3 className={` justify-center ${styles['results']}`}>
+                        Download Speed: &nbsp; 400kbs
+                    </h3>
+                    <h3 className={` justify-center ${styles['results']}`}>
+                        Last Tested: &nbsp; 11:23am
+                    </h3>
+                </div>
             </div>
         </div>
     )

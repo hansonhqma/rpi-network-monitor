@@ -8,17 +8,19 @@ import WebpageWrapper from '@/WebpageWrapper'
 import { HeroSection } from '@/HeroSection'
 import { FeaturesSection } from "@/FeaturesSection"
 import { ConnectionResults } from "@/common/components/layouts/HomepageContent/ConnectionResults/__index"
-
-
+import { PopupT } from "@/common/components/layouts/PopupT/__index"
+//Insert <PopupT /> when fixed
 
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
-  return (
+    
+    return (
       <WebpageWrapper>
         <HeroSection />
         <FeaturesSection />
         <ConnectionResults />
       </WebpageWrapper>
-  )
+    )
+  
 }
