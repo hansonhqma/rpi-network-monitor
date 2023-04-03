@@ -1,3 +1,44 @@
+import React from 'react';
+import mapboxgl from 'mapbox-gl';
+
+import 'mapbox-gl/dist/mapbox-gl.css';
+import './MapSection.module.css';
+
+function MapSection() {
+    // Temporary Token. Only could update 5000 times per month for free.
+  mapboxgl.accessToken = 'pk.eyJ1Ijoia3VuYXJhIiwiYSI6ImNsZHFwM3FqaTFldGczbnRiNms0ZWhzNTAifQ.lqRFZ326eUyIkXvRPp0w5w';
+  const mapContainer = React.useRef(null);
+
+  React.useEffect(() => {
+    const map = new mapboxgl.Map({
+      container: mapContainer.current,
+      style: 'mapbox://styles/mapbox/streets-v9',
+      center: [-21.92661562, 64.14356426],
+      zoom: 13
+    });
+
+    const popup = new mapboxgl.Popup().setHTML('<h3>Reykjavik Roasters</h3><p>A good coffee shop</p>');
+
+    const marker = new mapboxgl.Marker()
+      .setLngLat([-21.92661562, 64.14356426])
+      .setPopup(popup)
+      .addTo(map);
+
+    return () => map.remove();
+  }, []);
+
+  return (
+    <div>
+      <div id="map-container" ref={mapContainer} style={{ width: '100%', height: '500px' }} />
+      <h1>This is a Heading</h1>
+      <p>Description</p>
+    </div>
+  );
+}
+
+export default MapSection;
+
+
 /*function App() {
     return (
         <html>
