@@ -13,6 +13,8 @@
       "@/GridSection": ["./src/common/components/layouts/HomepageContent/GridSection/__index.js"],
       "@/FeaturesSection": ["./src/common/components/layouts/HomepageContent/FeaturesSection/__index.js"],
       "@/ConnectionResults": ["./src/common/components/layouts/HomepageContent/ConnectionResults/__index.js"],
+      "@/TableSection": ["./src/common/components/layouts/DirectorypageContent/TableSection/__index.js"],
+      "@/backEnd/*": ["../../backEnd/*"],
     }
   }
 }
