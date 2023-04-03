@@ -5,7 +5,7 @@ import { Inter } from '@next/font/google'
 
 import WebpageWrapper from '@/WebpageWrapper'
 
-import { HeroSection } from '@/HeroSection'
+import { TableSection } from '@/TableSection'
 import { FeaturesSection } from "@/FeaturesSection"
 import { ConnectionResults } from "@/common/components/layouts/HomepageContent/ConnectionResults/__index"
 
@@ -16,7 +16,7 @@ const inter = Inter({ subsets: ['latin'] })
 export default function Home() {
   return (
       <WebpageWrapper>
-
+        <TableSection />
       </WebpageWrapper>
   )
 }
