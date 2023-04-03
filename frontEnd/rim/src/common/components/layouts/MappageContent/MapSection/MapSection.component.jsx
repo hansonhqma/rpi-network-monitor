@@ -13,14 +13,14 @@ function MapSection() {
     const map = new mapboxgl.Map({
       container: mapContainer.current,
       style: 'mapbox://styles/mapbox/streets-v9',
-      center: [-21.92661562, 64.14356426],
-      zoom: 13
+      center: [-73.678802, 42.730171],
+      zoom: 15
     });
 
     const popup = new mapboxgl.Popup().setHTML('<h3>Reykjavik Roasters</h3><p>A good coffee shop</p>');
 
     const marker = new mapboxgl.Marker()
-      .setLngLat([-21.92661562, 64.14356426])
+      .setLngLat([-73.678802, 42.730171])
       .setPopup(popup)
       .addTo(map);
 
