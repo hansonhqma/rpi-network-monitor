@@ -13,9 +13,6 @@ import { PopupT } from "@/common/components/layouts/PopupT/__index"
 
 const inter = Inter({ subsets: ['latin'] })
 
-var imageAddr = "https://raw.githubusercontent.com/hansonhqma/rpi-network-monitor/main/server/index.html";
-var downloadSize = 1269; //bytes 
-
 if (typeof window !== 'undefined') {
   // on the browser, do speed check
   console.log("on the browser")
