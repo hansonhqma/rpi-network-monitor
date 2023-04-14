@@ -37,34 +37,6 @@ if (typeof window !== 'undefined') {
   
   }
 
-  /*
-  const columns = [
-      {
-          Header: 'Building',
-          accessor: 'building_name',
-      },
-      {
-          Header: 'RTT',
-          accessor: 'building_id',
-      },
-      {
-          Header: 'Updated Time',
-          accessor: 'last_updated',
-      },
-  ];    
-  
-  const [data, setData] = useState([]);
-  useEffect(() => {
-      axios.get('/get_building_avg')
-        .then(response => setData(response.data))
-        .catch(error => console.log(error));
-    }, []);
-
-  const { getTableProps, getTableBodyProps, headerGroups, rows, prepareRow } =
-      useTable({ columns, data });
-
-*/
-
 
 
 export default function ConnectionResults( props ){
@@ -84,7 +56,7 @@ export default function ConnectionResults( props ){
                         Building Name: &nbsp; Walker Laboratories
                     </h3>
                     <h3 className={` justify-center ${styles['results']}`}>
-                        Download Speed: &nbsp; <p id="output"></p> mbps
+                        Download Speed: &nbsp; <h5 id="output"></h5> &nbsp; Mbps
                     </h3>
                 </div>
             </div>
