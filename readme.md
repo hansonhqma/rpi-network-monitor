@@ -24,6 +24,4 @@ Docker will build the three containers and deploy each in order. Ignore some of 
 
 ### Hit it
 
-We can now open **RIM** at:
-
-                [localhost:3000](http://localhost:3000/)
+We can now open **RIM** at *http://localhost:3000/*
