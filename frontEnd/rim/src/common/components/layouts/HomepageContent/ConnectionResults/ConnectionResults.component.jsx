@@ -50,7 +50,7 @@ export default function ConnectionResults( props ){
                         Building Name: &nbsp; Walker Laboratories
                     </h3>
                     <h3 className={` justify-center ${styles['results']}`}>
-                        Download Speed: &nbsp; <p className= "output" id="output"></p> &nbsp; Mbps
+                        Download Speed:&nbsp;<div className= "output" id="output"></div>&nbsp;Mbps
                     </h3>
                 </div>
             </div>
