@@ -1,0 +1,30 @@
+version: "3.9"
+services:
+  db:
+    image: postgres:14.1-alpine
+    restart: always
+    environment:
+      - POSTGRES_USER=networkmon
+      - POSTGRES_PASSWORD=temp
+      - POSTGRES_DB=rim
+    ports:
+      - '5432:5432'
+    volumes: 
+      - ./backEnd/test_data.sql:/docker-entrypoint-initdb.d/create_tables.sql
+    hostname: psql
+
+  api:
+    build:
+      context: "backEnd/"
+    ports:
+      - '31415:31415'
+    hostname: api
+    restart: always
+  front_end:
+    build:
+      context: "frontEnd/rim/"
+    depends_on:
+      - api
+    ports:
+      - 3000:3000
+    hostname: restapp

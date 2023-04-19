@@ -2,18 +2,22 @@
 
 require('dotenv').config();
 const express = require('express');
+const cors = require('cors');
+const app = express();
+
+// global middleware
+app.use(cors());
 
 
 /* Creates an Express application.
 The express() function is a top-level
 function exported by the express module.
 */
-const app = express();
 const Pool = require('pg').Pool;
 
 const pool = new Pool({
 	user: process.env.POSTGRES_USER,
-	host: 'localhost',
+	host: 'psql',
 	database: 'rim',
 	password: process.env.POSTGRES_PW,
 	dialect: 'postgres',
@@ -33,8 +37,10 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 pool.connect((err, client, release) => {
 	if (err) {
+		throw new Error();
 		return console.error(
 			'Error acquiring client', err.stack)
+
 	}
 	client.query('SELECT NOW()', (err, result) => {
 		release()
