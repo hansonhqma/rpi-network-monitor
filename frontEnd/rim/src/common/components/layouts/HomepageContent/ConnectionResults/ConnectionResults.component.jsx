@@ -22,8 +22,8 @@ if (typeof window !== 'undefined') {
       var speedBps = (bitsLoaded / duration).toFixed(2);
       var speedKbps = (speedBps / 1024).toFixed(2);
       var speedMbps = (speedKbps / 1024).toFixed(2);
-      console.log("speed Mbps: " + speedMbps)
-      document.getElementById('output').innerHTML = speedMbps;
+      console.log("speed Mbps: " + speedMbps);
+       document.getElementById('output').innerHTML = speedMbps;
     }
   
     download.onerror = function (err, msg) {
@@ -41,11 +41,10 @@ if (typeof window !== 'undefined') {
 
 export default function ConnectionResults( props ){
      return ( 
-        <div className={`webpage-content-section-container ${styles['support-padding-top']}`}> 
-            <div className={`flex flow-col webpage-content-section-main-box ${styles['support-second-margin']}`}>
+        <div className={`webpage-content-section-container `}> 
+            <div className={`flex flow-col webpage-content-section-main-box`}>
                 
-                <h3 className={'justify-center'} >Current Connection Results:</h3>
-                <h5 className={'justify-center '}>"Your connection results below"</h5>
+                <h3 className={'justify-center'} >Current Connection Results</h3>
                 
                 <h3></h3>
                 <div className={`${styles['hr']}`}><hr /></div>
