@@ -31,7 +31,7 @@ const WebpageWrapper = (props) => {
 
     return (
         <>
-            {/* <HeaderComponent /> */}
+            <HeaderComponent />
             <div id="page-container" className={`primary-bg ${styles['webpage-container']}`} >
               { props.children }
             </div>
