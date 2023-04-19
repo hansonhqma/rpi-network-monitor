@@ -3,11 +3,6 @@
 import styles from './ConnectionResults.module.css'
 import React, { useState, useEffect } from 'react';
 
-
-//This is where we get the users current results
-//fetch("localhost:3000/get_building_last?ip=129.139.34.29")
-//.then((response) => response.json)
-
 if (typeof window !== 'undefined') {
     // on the browser, do speed check
     console.log("on the browser")
@@ -23,7 +18,7 @@ if (typeof window !== 'undefined') {
       var speedKbps = (speedBps / 1024).toFixed(2);
       var speedMbps = (speedKbps / 1024).toFixed(2);
       console.log("speed Mbps: " + speedMbps);
-       document.getElementById('output').innerHTML = speedMbps;
+       document.getElementById('output').innerHTML = speedMbps.toString();
     }
   
     download.onerror = function (err, msg) {
@@ -50,12 +45,12 @@ export default function ConnectionResults( props ){
                 <div className={`${styles['hr']}`}><hr /></div>
                 <h3></h3>
 
-                <div class = "container">
+                <div className = "container">
                     <h3 className={` justify-center ${styles['results']}`}>
                         Building Name: &nbsp; Walker Laboratories
                     </h3>
                     <h3 className={` justify-center ${styles['results']}`}>
-                        Download Speed: &nbsp; <h5 id="output"></h5> &nbsp; Mbps
+                        Download Speed: &nbsp; <p className= "output" id="output"></p> &nbsp; Mbps
                     </h3>
                 </div>
             </div>

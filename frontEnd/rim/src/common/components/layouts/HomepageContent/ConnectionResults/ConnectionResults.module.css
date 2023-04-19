@@ -2,6 +2,15 @@
   padding-top: 50px;
   opacity: var(--high-emphasis-text);
 }
+
+.results p{
+
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    
+}
 .container {
   display: flex;
 }

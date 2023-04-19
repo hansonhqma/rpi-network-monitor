@@ -85,7 +85,7 @@ const App = () => {
                 </thead>
                 <tbody>
                     {sortedData.map((info, index) => (
-                        <tr>
+                        <tr key={"Table-Element-" + index}>
                             <td>{info.building_name}</td>
                             <td>{info.download_speed}</td>
                             <td>{info.upload_speed}</td>

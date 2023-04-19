@@ -21,7 +21,7 @@ const WebpageWrapper = (props) => {
 
     useEffect(() => {
         window.addEventListener("scroll", handleScroll);
-    }, []);
+    });
    
     useEffect(() => {
         if( !(scrollPercentage < 5) ){
@@ -31,7 +31,7 @@ const WebpageWrapper = (props) => {
 
     return (
         <>
-            <HeaderComponent />
+            {/* <HeaderComponent /> */}
             <div id="page-container" className={`primary-bg ${styles['webpage-container']}`} >
               { props.children }
             </div>

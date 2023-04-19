@@ -30,13 +30,14 @@ const HeaderComponent = (props) => {
                 <Image src={Logo} alt="RPI Internet Monitor Logo" /> 
             </Link>
             <div className={`flex fill-horizontal flow-row justify-end ${styles['header-link-container']}`}>
-               {temp_array.map(( element, index ) => {
+               {temp_array.map(( element, index) => {
                     return (
-                        <Link className="flex flex-center" href={element.link}>
+                        <Link className="flex flex-center" key={"Header-Element-" + index} href={element.link}>
                             {element.title}
                         </Link>
                     );
                })} 
+               
             </div>
         </header>
     );

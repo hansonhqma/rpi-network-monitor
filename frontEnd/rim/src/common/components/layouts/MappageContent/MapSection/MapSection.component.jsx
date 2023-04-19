@@ -31,9 +31,9 @@ function MapSection() {
     <div>
       <div id="map-container" ref={mapContainer} style={{ width: '100%', height: '500px' }} />
       <h1>Description of Interactive RPI Map:</h1>
-      <p>This feature of RIM is meant to allow users to view internet speed statistics of different buildings around RPI's campus. 
+      <p>This feature of RIM is meant to allow users to view internet speed statistics of different buildings around RPI&apos;s campus. 
           Each building will have a button associated with it, and when clicked or selected, it will display the statistics of that particular building. 
-          By default, the statistics of the building that the user's device is currently connected to will be displayed.
+          By default, the statistics of the building that the user&apos;s device is currently connected to will be displayed.
           This feature provides an easy way for users to access important information about different buildings while also being able to see the building location on a campus map. 
       </p>
     </div>
