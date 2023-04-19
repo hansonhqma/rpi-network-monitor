@@ -1,5 +1,4 @@
-# RPI Internet Monitor
-##### A Campus-Wide Internet Monitoring Tool
+# RPI Internet Monitor: ##### A Campus-Wide Internet Monitoring Tool
 
 ## CSCI 4440 S23 Team project
 
