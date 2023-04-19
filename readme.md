@@ -4,26 +4,24 @@
 
 RPI Internet Monitor, RIM, is a comprehensive web application for monitoring and analyzing internet performance on the RPI campus. It provides real-time visibility into internet activity, enabling users to view internet speed at locations around RPI.
 
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+This is a [Next.js](https://nextjs.org/) front-end bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) attached to a [PostgreSQL](https://www.postgresql.org/) database via an [Express.js app](https://expressjs.com/).
 
-## Setting Up Next JS
+## Running with Docker
 
-1) Install nodejs and npm globally after updating
-    sudo apt-get update
-    sudo apt-get install nodejs
-    sudo apt-get install npm
+We utilize Docker >v20 for our application build.
 
-2) Install nextjs globally 
-    npm install -g next (install in rim folder in frontEnd folder)
+### Install Docker Desktop
 
-3) Create nextjs app - npx create-next-app four_square
+[Install](https://www.docker.com/products/docker-desktop/) Docker and Docker Desktop. We utilize Docker Compose for our build process.
 
-4) Run app - npm run dev
+### Build and Launch
 
-First, run the development server:
+Clone our repo. In the top level of the repo, with Docker running:
 
-```bash
-npm run dev
-```
+                docker compose up
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Docker will build the three containers and deploy each in order. Ignore some of the deployment output, it may be messy...
+
+### Hit it
+
+We can now open **RIM** at *[localhost:3000](http://localhost:3000/)*
