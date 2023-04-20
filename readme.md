@@ -18,7 +18,7 @@ We utilize Docker >v20 for our application build.
 
 Clone our repo. In the top level of the repo, with Docker running:
 
-                docker compose up
+                $ docker compose up
 
 Docker will build the three containers and deploy each in order. Ignore some of the deployment output, it may be messy...
 
