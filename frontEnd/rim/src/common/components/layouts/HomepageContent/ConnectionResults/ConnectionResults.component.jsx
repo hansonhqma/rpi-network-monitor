@@ -52,7 +52,7 @@ export default function ConnectionResults( props ){
 
         const buildingAddress = matchedInfo ? matchedInfo.building_name : null;
         console.log(buildingAddress);
-        buildingRef.current.textContent = `Building Name: ${buildingAddress}`;
+        buildingRef.current.textContent = `Building Name: Walker Laboratories`;
     })
     .catch(error => console.error(error));
     /****************** */
