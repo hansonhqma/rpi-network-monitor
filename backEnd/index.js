@@ -16,10 +16,10 @@ function exported by the express module.
 const Pool = require('pg').Pool;
 
 const pool = new Pool({
-	user: process.env.POSTGRES_USER,
+	user: 'networkmon',
 	host: 'psql',
 	database: 'rim',
-	password: process.env.POSTGRES_PW,
+	password: 'temp',
 	dialect: 'postgres',
 	port: 5432
 });
