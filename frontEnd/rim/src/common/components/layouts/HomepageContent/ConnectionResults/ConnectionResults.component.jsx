@@ -46,6 +46,7 @@ export default function ConnectionResults( props ){
         .then(data => {
         console.log(data);
         const ip = data.ip.split(' ')[0];
+        console.log(ip);
         const matchedInfo = infos.find(info => info.ip_address === ip);
         console.log(matchedInfo);
 
@@ -73,6 +74,8 @@ export default function ConnectionResults( props ){
           console.error(error);
         });
     }, []);
+    // UPDATE RTT FUNcTION
+    // NOT UPDATA THE LOCATION WHILE UPDATE THE RTT
     function handleClick() {
         const url = "https://www.example.com/";
         const startTime = performance.now();
