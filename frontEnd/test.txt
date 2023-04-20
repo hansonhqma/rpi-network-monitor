@@ -9,3 +9,5 @@
 3) Create nextjs app - npx create-next-app four_square
 
 4) Run app - npm run dev
+
+For the map page, open source, Mapbox, is used. Official link is mapbox.com.
