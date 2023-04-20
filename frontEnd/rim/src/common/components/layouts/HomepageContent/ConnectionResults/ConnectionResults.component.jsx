@@ -2,6 +2,7 @@
 
 import styles from './ConnectionResults.module.css'
 import React, { useState, useEffect } from 'react';
+import data from '@/assets/jsonFile/mock-data.json';
 
 if (typeof window !== 'undefined') {
     // on the browser, do speed check
@@ -35,6 +36,18 @@ if (typeof window !== 'undefined') {
 
 
 export default function ConnectionResults( props ){
+    // FIND THE GATEWAY/IP
+    fetch('https://ipapi.co/json/')
+        .then(response => response.json())
+        .then(data => {
+        console.log(data);
+        console.log(`Gateway: ${data.ip.split(' ')[0]}`);
+    })
+    .catch(error => console.error(error));
+    /****************** */
+    // FIND BUIDLING NAME WITH IP ADDRESS
+    const [infos, setInfo] = useState(data);
+    /****************** */
      return ( 
         <div className={`webpage-content-section-container `}> 
             <div className={`flex flow-col webpage-content-section-main-box`}>
