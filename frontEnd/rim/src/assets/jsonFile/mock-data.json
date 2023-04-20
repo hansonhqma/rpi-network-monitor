@@ -1,161 +1,121 @@
 [
     {
       "ip_address": "192.168.0.1",
-      "rtt": 38,
-      "download_speed": 60.2,
-      "upload_speed": 20,
+      "rtt": 1.38,
       "building_name": "Commons Dining Hall",
       "update_time": "2023-03-31T10:24:00Z"
     },
     {
       "ip_address": "192.168.0.2",
-      "rtt": 51,
-      "download_speed": 180.5,
-      "upload_speed": 10,
+      "rtt": 3.51,
       "building_name": "Voorhees Computing Ctr.",
       "update_time": "2023-03-31T21:17:45Z"
     },
     {
       "ip_address": "192.168.0.3",
-      "rtt": 37,
-      "download_speed": 93.8,
-      "upload_speed": 30,
+      "rtt": 0.37,
       "building_name": "Amos Eaton Hall",
       "update_time": "2023-03-31T03:56:12Z"
     },
     {
       "ip_address": "192.168.0.4",
-      "rtt": 40,
-      "download_speed": 120.1 ,
-      "upload_speed": 15,
+      "rtt": 2.40,
       "building_name": "EMPAC",
       "update_time": "2023-03-31T18:42:30Z"
     },
     {
       "ip_address": "192.168.0.5",
-      "rtt": 51,
-      "download_speed": 40.6,
-      "upload_speed": 40,
+      "rtt": 5.51,
       "building_name": "Darrin Communications Center (DCC)",
       "update_time": "2023-03-31T08:15:55Z"
     },
     {
       "ip_address": "192.168.0.6",
-      "rtt": 54,
-      "download_speed": 220.9 ,
-      "upload_speed": 25,
+      "rtt": 5.54,
       "building_name": "East Campus Athletic Village Arena (ECAV)",
       "update_time": "2023-03-31T23:03:21Z"
     },
     {
       "ip_address": "192.168.0.7",
-      "rtt": 49,
-      "download_speed": 75.3 ,
-      "upload_speed": 12,
+      "rtt": 7.49,
       "building_name": "Ricketts Building",
       "update_time": "2023-03-31T14:08:03Z"
     },
     {
       "ip_address": "192.168.0.8",
-      "rtt": 53,
-      "download_speed": 150.8 ,
-      "upload_speed": 35,
+      "rtt": 2.53,
       "building_name": "Academy Hall",
       "update_time": "2023-03-31T12:39:18Z"
     },
     {
       "ip_address": "192.168.0.9",
-      "rtt": 62,
-      "download_speed": 31.7 ,
-      "upload_speed": 18,
+      "rtt": 5.62,
       "building_name": "Blitman Residence Commons",
       "update_time": "2023-03-31T04:20:47Z"
     },
     {
       "ip_address": "192.168.0.10",
-      "rtt": 66,
-      "download_speed": 78.2 ,
-      "upload_speed": 28,
+      "rtt": 1.66,
       "building_name": "Carnegie Building",
       "update_time": "2023-03-31T15:37:59Z"
     },
     {
       "ip_address": "192.168.0.11",
-      "rtt": 42,
-      "download_speed": 110.5 ,
-      "upload_speed": 22,
+      "rtt": 5.42,
       "building_name": "Low Ctr. for Industrial Innovation",
       "update_time": "2023-03-31T09:31:01Z"
     },
     {
       "ip_address": "192.168.0.12",
-      "rtt": 53,
-      "download_speed": 45.9 ,
-      "upload_speed": 32,
+      "rtt": 3.53,
       "building_name": "Davison Hall",
       "update_time": "2023-03-31T07:49:26Z"
     },
     {
       "ip_address": "192.168.0.13",
-      "rtt": 31,
-      "download_speed": 240.6 ,
-      "upload_speed": 14,
+      "rtt": 3.31,
       "building_name": "Mueller Center",
       "update_time": "2023-03-31T17:32:14Z"
     },
     {
       "ip_address": "192.168.0.14",
-      "rtt": 76,
-      "download_speed": 83.7 ,
-      "upload_speed": 24,
+      "rtt": 8.76,
       "building_name": "North Hall",
       "update_time": "2023-03-31T06:03:47Z"
     },
     {
         "ip_address": "192.168.0.15",
-        "rtt": 62,
-        "download_speed": 190.4 ,
-        "upload_speed": 8,
+        "rtt": 1.62,
         "building_name": "Lally Hall",
         "update_time": "2023-03-31T20:15:05Z"
     },
     {
         "ip_address": "192.168.0.16",
         "rtt": 45,
-        "download_speed": 54.1 ,
-        "upload_speed": 38,
         "building_name": "E Complex",
         "update_time": "2023-03-31T11:56:35Z"
       },
       {
         "ip_address": "192.168.0.17",
-        "rtt": 29,
-        "download_speed": 200.2,
-        "upload_speed": 16,
+        "rtt": 2.29,
         "building_name": "West Hall",
         "update_time": "2023-03-31T16:27:09Z"
       },
       {
         "ip_address": "192.168.0.18",
-        "rtt": 89,
-        "download_speed": 68.9 ,
-        "upload_speed": 26,
+        "rtt": 4.89,
         "building_name": "Russell Sage Laboratory",
         "update_time": "2023-03-31T05:18:52Z"
       },
       {
         "ip_address": "192.168.0.19",
-        "rtt": 56,
-        "download_speed": 130.7 ,
-        "upload_speed": 33,
+        "rtt": 1.56,
         "building_name": "Walker Laboratory",
         "update_time": "2023-03-31T13:11:48Z"
       },
       {
         "ip_address": "192.168.0.20",
-        "rtt": 68,
-        "download_speed": 38.5 ,
-        "upload_speed": 19,
+        "rtt": 2.68,
         "building_name": "Pittsburgh Building",
         "update_time": "2023-03-31T19:08:16Z"
       }

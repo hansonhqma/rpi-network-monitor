@@ -69,11 +69,8 @@ const App = () => {
                         <th><h5>Building &nbsp;
                             <button onClick={() => sortData("building_name")}>sort</button>
                             </h5></th>
-                        <th><h5>Download Speed (Mbps) &nbsp;
-                            <button onClick={() => sortData("download_speed")}>sort</button>
-                            </h5></th>
-                        <th><h5>Upload Speed (Mbps) &nbsp;
-                            <button onClick={() => sortData("upload_speed")}>sort</button>
+                        <th><h5>Gateway &nbsp;
+                            <button onClick={() => sortData("ip_address")}>sort</button>
                             </h5></th>
                         <th><h5>RTT (ms) &nbsp;
                             <button onClick={() => sortData("rtt")}>sort</button>
@@ -87,8 +84,7 @@ const App = () => {
                     {sortedData.map((info, index) => (
                         <tr key={"Table-Element-" + index}>
                             <td>{info.building_name}</td>
-                            <td>{info.download_speed}</td>
-                            <td>{info.upload_speed}</td>
+                            <td>{info.ip_address}</td>
                             <td>{info.rtt}</td>
                             <td>{info.update_time}</td>
                         </tr>
