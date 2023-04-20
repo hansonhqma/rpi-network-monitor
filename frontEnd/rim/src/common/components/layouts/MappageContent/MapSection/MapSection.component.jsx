@@ -4,6 +4,8 @@ import mapboxgl from 'mapbox-gl';
 import 'mapbox-gl/dist/mapbox-gl.css';
 import './MapSection.module.css';
 
+import styles from './MapSection.module.css'
+
 function MapSection() {
     // Temporary Token. Only could update 5000 times per month for free.
   mapboxgl.accessToken = 'pk.eyJ1Ijoia3VuYXJhIiwiYSI6ImNsZHFwM3FqaTFldGczbnRiNms0ZWhzNTAifQ.lqRFZ326eUyIkXvRPp0w5w';
@@ -30,12 +32,18 @@ function MapSection() {
   return (
     <div>
       <div id="map-container" ref={mapContainer} style={{ width: '100%', height: '500px' }} />
-      <h1>Description of Interactive RPI Map:</h1>
-      <p>This feature of RIM is meant to allow users to view internet speed statistics of different buildings around RPI&apos;s campus. 
-          Each building will have a button associated with it, and when clicked or selected, it will display the statistics of that particular building. 
-          By default, the statistics of the building that the user&apos;s device is currently connected to will be displayed.
-          This feature provides an easy way for users to access important information about different buildings while also being able to see the building location on a campus map. 
-      </p>
+
+      <div className="webpage-content-section-container">
+        <div className={`flex flow-col webpage-content-section-main-box ${styles['features-second-margin']}`}>
+          <h1>Description of Interactive RPI Map:</h1>
+          <p className={`margin-0   margin-bottom-10 ${styles['map-p-line-clamp']}`}>This feature of RIM is meant to allow users to view internet speed statistics of different buildings around RPI&apos;s campus. 
+              Each building will have a button associated with it, and when clicked or selected, it will display the statistics of that particular building. 
+              By default, the statistics of the building that the user&apos;s device is currently connected to will be displayed.
+              This feature provides an easy way for users to access important information about different buildings while also being able to see the building location on a campus map. 
+          </p>
+        </div>
+      </div>
+
     </div>
   );
 }
