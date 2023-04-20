@@ -1,8 +1,8 @@
 //THIS IS CONNECTION RESULTS (RENAME)
 
 import styles from './ConnectionResults.module.css'
-import React, { useState, useEffect } from 'react';
-import data from '@/assets/jsonFile/mock-data.json';
+import React, { useState, useEffect, useRef } from 'react';
+import mockData from '@/assets/jsonFile/mock-data.json';
 
 if (typeof window !== 'undefined') {
     // on the browser, do speed check
@@ -19,7 +19,7 @@ if (typeof window !== 'undefined') {
       var speedKbps = (speedBps / 1024).toFixed(2);
       var speedMbps = (speedKbps / 1024).toFixed(2);
       console.log("speed Mbps: " + speedMbps);
-       document.getElementById('output').innerHTML = speedMbps.toString();
+       //document.getElementById('output').innerHTML = speedMbps.toString();
     }
   
     download.onerror = function (err, msg) {
@@ -36,17 +36,43 @@ if (typeof window !== 'undefined') {
 
 
 export default function ConnectionResults( props ){
+    // FIND BUIDLING NAME WITH IP ADDRESS
+    const [infos, setInfo] = useState(mockData);
+    const buildingRef = useRef(null);
+    /****************** */    
     // FIND THE GATEWAY/IP
     fetch('https://ipapi.co/json/')
         .then(response => response.json())
         .then(data => {
         console.log(data);
-        console.log(`Gateway: ${data.ip.split(' ')[0]}`);
+        const ip = data.ip.split(' ')[0];
+        const matchedInfo = infos.find(info => info.ip_address === ip);
+        console.log(matchedInfo);
+
+        const buildingAddress = matchedInfo ? matchedInfo.building_name : null;
+        console.log(buildingAddress);
+        buildingRef.current.textContent = `Building Name: ${buildingAddress}`;
     })
     .catch(error => console.error(error));
     /****************** */
-    // FIND BUIDLING NAME WITH IP ADDRESS
-    const [infos, setInfo] = useState(data);
+    // FINT RTT TIME
+    const outputRef = useRef(null);
+    useEffect(() => {
+      const url = "https://www.example.com/";
+      const startTime = performance.now();
+  
+      fetch(url, { mode: "no-cors" })
+        .then(() => {
+          const endTime = performance.now();
+          const rtt = endTime - startTime; // RTT in milliseconds
+  
+          outputRef.current.textContent = `Round-Trip Time(RTT): ${rtt.toFixed(2)} ms`;
+          console.log(outputRef.current.textContent);
+        })
+        .catch((error) => {
+          console.error(error);
+        });
+    }, []);
     /****************** */
      return ( 
         <div className={`webpage-content-section-container `}> 
@@ -58,12 +84,12 @@ export default function ConnectionResults( props ){
                 <div className={`${styles['hr']}`}><hr /></div>
                 <h3></h3>
 
-                <div className = "container">
+                <div>
                     <h3 className={` justify-center ${styles['results']}`}>
-                        Building Name: &nbsp; Walker Laboratories
+                        <div ref={buildingRef}></div>
                     </h3>
                     <h3 className={` justify-center ${styles['results']}`}>
-                        Download Speed:&nbsp;<div className= "output" id="output"></div>&nbsp;Mbps
+                        <div ref={outputRef} id="output"></div>
                     </h3>
                 </div>
             </div>

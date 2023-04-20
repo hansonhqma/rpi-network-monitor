@@ -118,5 +118,12 @@
         "rtt": 2.68,
         "building_name": "Pittsburgh Building",
         "update_time": "2023-03-31T19:08:16Z"
+      },
+      {
+        "ip_address": "2620:0:2820:104:a017:ae0f:ac4b:7bdf",
+        "rtt": 2.68,
+        "building_name": "Folsom Library",
+        "update_time": "2023-03-31T19:08:16Z"
       }
+
 ]
