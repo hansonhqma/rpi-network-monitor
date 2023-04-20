@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>RTT Test</title>
+</head>
+<body>
+    <h1>RTT Test</h1>
+    <p>Click the button to measure the round-trip time (RTT) between the client and the server:</p>
+    <button onclick="measureRtt()">Measure RTT</button>
+    <p id="output"></p>
+    
+    <script>
+        function measureRtt() {
+            const url = "https://www.example.com/";
+            const startTime = performance.now();
+
+            fetch(url, { mode: "no-cors" })
+                .then(() => {
+                    const endTime = performance.now();
+                    const rtt = endTime - startTime; // RTT in milliseconds
+
+                    const outputElement = document.getElementById("output");
+                    outputElement.textContent = `RTT: ${rtt.toFixed(2)} ms`;
+                })
+                .catch((error) => {
+                    console.error(error);
+                });
+        }
+    </script>
+</body>
+</html>
