@@ -73,6 +73,22 @@ export default function ConnectionResults( props ){
           console.error(error);
         });
     }, []);
+    function handleClick() {
+        const url = "https://www.example.com/";
+        const startTime = performance.now();
+    
+        fetch(url, { mode: "no-cors" })
+          .then(() => {
+            const endTime = performance.now();
+            const rtt = endTime - startTime; // RTT in milliseconds
+    
+            const outputElement = document.getElementById("output");
+            outputElement.textContent = `Round-Trip Time(RTT): ${rtt.toFixed(2)} ms`;
+          })
+          .catch((error) => {
+            console.error(error);
+          });
+      }
     /****************** */
      return ( 
         <div className={`webpage-content-section-container `}> 
@@ -90,6 +106,9 @@ export default function ConnectionResults( props ){
                     </h3>
                     <h3 className={` justify-center ${styles['results']}`}>
                         <div ref={outputRef} id="output"></div>
+                    </h3>
+                    <h3 className={` justify-center ${styles['results']}`}>
+                        <button onClick={handleClick}>Measure Again</button>
                     </h3>
                 </div>
             </div>
