@@ -8,20 +8,60 @@ import './TableSection.module.css';
 
 const App = () => {
     const [infos, setInfo] = useState(data);
+    // SORTING RELATED
     const [sortedData, setSortedData] = useState([...data]);
+    const [sortOrderAsc, setSortOrderAsc] = useState(true);
     const sortData = (sortBy) => {
         const sorted = [...sortedData].sort((a, b) => {
           if (a[sortBy] < b[sortBy]) {
-            return -1;
+            return sortOrderAsc ? -1 : 1;
           }
           if (a[sortBy] > b[sortBy]) {
-            return 1;
+            return sortOrderAsc ? 1 : -1;
           }
           return 0;
         });
         setSortedData(sorted);
-    };
+        setSortOrderAsc(!sortOrderAsc);
+      };
 
+    return (
+        <div className="webpage-content-section-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th><h5>Building &nbsp;
+                            <button onClick={() => sortData("building_name")}>sort</button>
+                            </h5></th>
+                        <th><h5>Gateway &nbsp;
+                            <button onClick={() => sortData("ip_address")}>sort</button>
+                            </h5></th>
+                        <th><h5>RTT (ms) &nbsp;
+                            <button onClick={() => sortData("rtt")}>sort</button>
+                            </h5></th>
+                        <th><h5>Last Updated &nbsp;
+                            <button onClick={() => sortData("update_time")}>sort</button>
+                            </h5></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {sortedData.map((info, index) => (
+                        <tr key={"Table-Element-" + index}>
+                            <td>{info.building_name}</td>
+                            <td>{info.ip_address}</td>
+                            <td>{info.rtt}</td>
+                            <td>{info.update_time}</td>
+                        </tr>
+                    ))}
+                </tbody>
+            </table>
+        </div>
+    );
+};
+
+export default App;
+
+// Unused
     /*    
     const [sortedFeild, setSortedField] = React.useState(null);
     if(sortedFeild != null){
@@ -60,39 +100,3 @@ const App = () => {
 
     const { getTableProps, getTableBodyProps, headerGroups, rows, prepareRow } =
         useTable({ columns, data });*/
-
-    return (
-        <div className="webpage-content-section-container">
-            <table>
-                <thead>
-                    <tr>
-                        <th><h5>Building &nbsp;
-                            <button onClick={() => sortData("building_name")}>sort</button>
-                            </h5></th>
-                        <th><h5>Gateway &nbsp;
-                            <button onClick={() => sortData("ip_address")}>sort</button>
-                            </h5></th>
-                        <th><h5>RTT (ms) &nbsp;
-                            <button onClick={() => sortData("rtt")}>sort</button>
-                            </h5></th>
-                        <th><h5>Last Updated &nbsp;
-                            <button onClick={() => sortData("update_time")}>sort</button>
-                            </h5></th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {sortedData.map((info, index) => (
-                        <tr key={"Table-Element-" + index}>
-                            <td>{info.building_name}</td>
-                            <td>{info.ip_address}</td>
-                            <td>{info.rtt}</td>
-                            <td>{info.update_time}</td>
-                        </tr>
-                    ))}
-                </tbody>
-            </table>
-        </div>
-    );
-};
-
-export default App;
